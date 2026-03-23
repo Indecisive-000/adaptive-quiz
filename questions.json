@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "question": "What does OOP stand for?",
+    "options": ["Object-Oriented Programming", "Open Operating Process", "Ordered Object Protocol", "Output Oriented Programming"],
+    "answer": "Object-Oriented Programming",
+    "difficulty": 1,
+    "topic": "OOP"
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is a primary data type in most programming languages?",
+    "options": ["Array", "Integer", "Stack", "Dictionary"],
+    "answer": "Integer",
+    "difficulty": 1,
+    "topic": "Data Types"
+  },
+  {
+    "id": 3,
+    "question": "What is the decimal value of the binary number 1010?",
+    "options": ["8", "10", "12", "14"],
+    "answer": "10",
+    "difficulty": 1,
+    "topic": "Binary"
+  },
+  {
+    "id": 4,
+    "question": "Which gate outputs TRUE only when both inputs are TRUE?",
+    "options": ["OR", "NOT", "AND", "XOR"],
+    "answer": "AND",
+    "difficulty": 1,
+    "topic": "Logic Gates"
+  },
+  {
+    "id": 5,
+    "question": "What is the hexadecimal equivalent of decimal 255?",
+    "options": ["EE", "FE", "FF", "F0"],
+    "answer": "FF",
+    "difficulty": 1,
+    "topic": "Binary"
+  },
+  {
+    "id": 6,
+    "question": "What is the time complexity of binary search on a sorted array?",
+    "options": ["O(n)", "O(n²)", "O(log n)", "O(1)"],
+    "answer": "O(log n)",
+    "difficulty": 2,
+    "topic": "Algorithms"
+  },
+  {
+    "id": 7,
+    "question": "In OOP, what is the term for a class inheriting properties from another class?",
+    "options": ["Polymorphism", "Encapsulation", "Abstraction", "Inheritance"],
+    "answer": "Inheritance",
+    "difficulty": 2,
+    "topic": "OOP"
+  },
+  {
+    "id": 8,
+    "question": "Which sorting algorithm has an average time complexity of O(n log n)?",
+    "options": ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"],
+    "answer": "Merge Sort",
+    "difficulty": 2,
+    "topic": "Algorithms"
+  },
+  {
+    "id": 9,
+    "question": "What data structure uses LIFO (Last In First Out) order?",
+    "options": ["Queue", "Stack", "Array", "Linked List"],
+    "answer": "Stack",
+    "difficulty": 2,
+    "topic": "Data Structures"
+  },
+  {
+    "id": 10,
+    "question": "What is recursion in programming?",
+    "options": [
+      "A loop that runs a fixed number of times",
+      "A function that calls itself",
+      "A method that overrides a parent class",
+      "A variable that stores multiple values"
+    ],
+    "answer": "A function that calls itself",
+    "difficulty": 2,
+    "topic": "Algorithms"
+  },
+  {
+    "id": 11,
+    "question": "Which of the following best describes a linked list node?",
+    "options": [
+      "A variable storing a single integer",
+      "An object containing data and a pointer to the next node",
+      "A fixed-size block of memory",
+      "A key-value pair stored in a hash table"
+    ],
+    "answer": "An object containing data and a pointer to the next node",
+    "difficulty": 3,
+    "topic": "Data Structures"
+  },
+  {
+    "id": 12,
+    "question": "What is the worst-case time complexity of quicksort?",
+    "options": ["O(n log n)", "O(n)", "O(n²)", "O(log n)"],
+    "answer": "O(n²)",
+    "difficulty": 3,
+    "topic": "Algorithms"
+  },
+  {
+    "id": 13,
+    "question": "In a binary search tree, where is the smallest value always found?",
+    "options": ["Root node", "Rightmost node", "Leftmost node", "Any leaf node"],
+    "answer": "Leftmost node",
+    "difficulty": 3,
+    "topic": "Data Structures"
+  },
+  {
+    "id": 14,
+    "question": "What does polymorphism allow in OOP?",
+    "options": [
+      "A class to hide its internal data",
+      "Multiple classes to be treated as instances of the same class",
+      "A subclass to access private methods of a parent",
+      "An object to store multiple data types"
+    ],
+    "answer": "Multiple classes to be treated as instances of the same class",
+    "difficulty": 3,
+    "topic": "OOP"
+  },
+  {
+    "id": 15,
+    "question": "Which of the following describes a collision in a hash table?",
+    "options": [
+      "Two keys mapping to the same index",
+      "A key that cannot be hashed",
+      "A table that exceeds its maximum size",
+      "A search that returns no result"
+    ],
+    "answer": "Two keys mapping to the same index",
+    "difficulty": 3,
+    "topic": "Data Structures"
+  }
+]
