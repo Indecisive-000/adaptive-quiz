@@ -1,15 +1,4 @@
-import json
+from data_handler import load_questions
 
-questions = [
-    {
-        "id": 1,
-        "question": "",
-        "options": ["", ""],
-        "answer": "",
-        "difficulty": "",
-        "topic": ""
-    }
-]
-
-with open("questions.json", "w") as f:
-    json.dump(questions, f)
+questions = load_questions()
+print(questions[0]["question"])
