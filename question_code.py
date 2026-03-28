@@ -8,13 +8,12 @@ def add_newQuestion(new_question):
         json.dump(questions, f, indent = 2)
 
 
-# questions = {
-#         "id": 1,
-#         "question": "",
-#         "options": ["", ""],
-#         "answer": "",
-#         "difficulty": "",
-#         "topic": ""
-# }
+questions = {
+        "id": 1,
+        "question": "",
+        "options": ["", ""],
+        "answer": "",
+        "difficulty": "",
+        "topic": ""
+}
 
-# add_newQuestion(question)
