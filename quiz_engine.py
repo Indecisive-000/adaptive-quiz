@@ -29,18 +29,46 @@ def display_question(question, question_number, total, difficulty, score):
     print()
 
 def get_user_answer(question):
-    start_line = time.time()
+    start_time = time.time()
 
     while True:
         try: 
-            answer = int(input(f"ur answer: (1-{len(question['options'])}):"))
-            if 1 <= answer <= len(question['options']):
+            answer = int(input(f"ur answer: "))
+            if 1 <= answer <= len(question["options"]):
                 break
             else:
-                print(f"print number")
+                print(f"print correct number")
         except ValueError:
             print("invalid number")
-    time_taken = round( time.time() - start_line, 2)
+    time_taken = round( time.time() - start_time, 2)
     selected_option = question["options"][answer -1]
     is_correct = selected_option == question["answer"]
     return is_correct, time_taken
+
+
+
+def display_feedback(is_correct, time_taken, correct_answer, new_difficulty):
+    difficulties = {1: "Easy", 2: "Medium", 3: "Hard"}
+    print("----------------------")
+    if is_correct:
+        print("correct")
+    else:
+        print("wrong, correct answer is: ", correct_answer)
+    print(time_taken)
+    print(difficulties[new_difficulty])
+    print("----------------------")
+    
+
+def display_results(list_time_taken, list_is_correct):
+    sum_correct = 0
+    for i in list_is_correct:
+        if i:
+            sum_correct+=1
+    accuracy = round(sum_correct / len(list_is_correct) * 100, 2)
+    avg_time = round(sum(list_time_taken) / len(list_time_taken), 2)
+    print(sum_correct, "/", len(list_is_correct))
+    print(accuracy)
+    print(avg_time)
+
+
+

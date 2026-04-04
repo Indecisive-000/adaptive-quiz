@@ -1,7 +1,7 @@
 from data_handler import load_questions
 from adaptive_engine import calculate_performance, change_difficulty
 import os
-from quiz_engine import display_question, get_user_answer
+from quiz_engine import display_question, get_user_answer, display_feedback, display_results
 
 
 
@@ -27,3 +27,8 @@ display_question(question, 1, 10, 1, 0)
 is_correct, time_taken = get_user_answer(question)
 print(is_correct)
 print(time_taken)
+
+
+display_feedback(True, 5.56, "Object-Oriented Programming", 2)
+
+display_results([7.34, 2.34, 5.64, 5.34], [True, True, False, True])
