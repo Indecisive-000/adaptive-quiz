@@ -1,5 +1,6 @@
 import json
 
+#small function to add the questions, making my life a bit easier
 def add_newQuestion(new_question):
     with open("questions.json", "r") as f:
         questions = json.load(f)
@@ -8,6 +9,7 @@ def add_newQuestion(new_question):
         json.dump(questions, f, indent = 2)
 
 
+#standard format of question in json
 questions = {
         "id": 1,
         "question": "",

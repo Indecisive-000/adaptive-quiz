@@ -4,11 +4,12 @@ import os
 from quiz_engine import display_question, get_user_answer, display_feedback, display_results
 
 
-
+#getting questions 
 
 questions = load_questions()
 print(questions[0]["question"])
 
+#filling history list
 history = []
 score = calculate_performance(True, 15, 15)
 history.append(score)

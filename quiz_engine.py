@@ -4,7 +4,7 @@ import random
 
 TIME_LIMIT = 15
 
-
+#clearing screen
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -12,7 +12,7 @@ def display_question(question, question_number, total, difficulty, score):
     clear_screen()
     
     difficulty_label = {1: "Easy", 2: "Medium", 3: "Hard"}
-    
+    #format of printing
     print("=" * 50)
     print(f"Question {question_number} of {total}")
     print(f"Difficulty: {difficulty_label[difficulty]}")
@@ -34,6 +34,7 @@ def get_user_answer(question):
     while True:
         try: 
             answer = int(input(f"ur answer: "))
+            #protection from user mistake
             if 1 <= answer <= len(question["options"]):
                 break
             else:
@@ -46,7 +47,7 @@ def get_user_answer(question):
     return is_correct, time_taken
 
 
-
+#just feedback
 def display_feedback(is_correct, time_taken, correct_answer, new_difficulty):
     difficulties = {1: "Easy", 2: "Medium", 3: "Hard"}
     print("----------------------")
@@ -58,7 +59,7 @@ def display_feedback(is_correct, time_taken, correct_answer, new_difficulty):
     print(difficulties[new_difficulty])
     print("----------------------")
     
-
+#displaying the result (simple calculation)
 def display_results(list_time_taken, list_is_correct):
     sum_correct = 0
     for i in list_is_correct:
