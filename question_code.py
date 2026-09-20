@@ -9,7 +9,7 @@ def add_newQuestion(new_question):
         json.dump(questions, f, indent = 2)
 
 
-#standard format of question in json
+#standard format of question in json(for me to put the questions in json easily)
 questions = {
         "id": 1,
         "question": "",

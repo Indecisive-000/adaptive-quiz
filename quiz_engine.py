@@ -7,7 +7,7 @@ TIME_LIMIT = 15
 #clearing screen
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
-
+#displaying question(command line version)
 def display_question(question, question_number, total, difficulty, score):
     clear_screen()
     
@@ -27,7 +27,7 @@ def display_question(question, question_number, total, difficulty, score):
         print(f"  {i + 1}. {option}")
     
     print()
-
+#getting answer from user
 def get_user_answer(question):
     start_time = time.time()
 
