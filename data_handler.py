@@ -20,7 +20,7 @@ def questions_by_topic(questions, topic):
     for q in questions:
         if q["topic"] == topic:
             result.append(q)
-    return q
+    return result
     
 
 def saving_sessions(username, result):
