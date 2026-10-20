@@ -1,9 +1,14 @@
-import json, os
+import json, os, sys
 
+if getattr(sys, "frozen", False):
+    BUNDLE_DIR = sys._MEIPASS
+    APP_DIR = os.path.dirname(sys.executable)
+else:
+    BUNDLE_DIR = os.path.dirname(os.path.abspath(__file__))
+    APP_DIR = BUNDLE_DIR
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-QUESTIONS_FILE = os.path.join(BASE_DIR, "questions.json")
-SESSIONS_FILE = os.path.join(BASE_DIR, "sessions.json")
+QUESTIONS_FILE = os.path.join(BUNDLE_DIR, "questions.json")
+SESSIONS_FILE = os.path.join(APP_DIR, "sessions.json")
 
 
 def load_questions():
