@@ -1,11 +1,16 @@
-import json
+import json, os
 
-#getting the question from json file
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+QUESTIONS_FILE = os.path.join(BASE_DIR, "questions.json")
+SESSIONS_FILE = os.path.join(BASE_DIR, "sessions.json")
+
+
 def load_questions():
-    with open ("questions.json", "r") as f:
+    with open(QUESTIONS_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
 
-#filtering the questions by difficulty
+
 def questions_by_difficulty(questions, difficulty):
     result = []
     for q in questions:
@@ -13,28 +18,28 @@ def questions_by_difficulty(questions, difficulty):
             result.append(q)
     return result
 
-    
-#filtering the questions by topic
+
 def questions_by_topic(questions, topic):
     result = []
     for q in questions:
         if q["topic"] == topic:
             result.append(q)
     return result
-    
+
+
+def load_sessions():
+    try:
+        with open(SESSIONS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return []
+
 
 def saving_sessions(username, result):
-    try:
-        with open("sessions.json", "r") as f:
-            session = json.load(f)
-    except FileNotFoundError:
-        session = []
-    
-    session.append({
+    sessions = load_sessions()
+    sessions.append({
         "username": username,
         "result": result
     })
-    with open("sessions.json", "w") as f:
-        json.dump(session, f, indent=2)
-
-
+    with open(SESSIONS_FILE, "w", encoding="utf-8") as f:
+        json.dump(sessions, f, indent=2, ensure_ascii=False)
